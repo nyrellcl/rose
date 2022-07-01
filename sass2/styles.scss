@@ -12,27 +12,6 @@ img{
 
 }
 
-/*.gallery-container{
-    display: flex;
-    width: 100vw;
-    height: 40vh;
-    position: relative;
-    margin: auto;
-    overflow: auto;
-    justify-content: center;
-    scroll-snap-type: mandatory;
-    align-items: center;
-    &::-webkit-scrollbar{
-        width: 0;
-    }
-    .gallery{
-        position: relative;
-        scroll-snap-align: start;
-        height: 200px;
-        min-width: 150px;
-    }
-}*/
-
 #intro{
     display: flex;
     flex-direction: column;
