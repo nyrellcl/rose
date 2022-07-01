@@ -1,0 +1,26 @@
+@media only screen and (max-width: 500px){
+    .gallery{
+        width: 100%;
+        div:nth-child(4), :nth-child(5), :nth-child(6){
+            img{
+                object-fit: contain;
+            }
+        }
+    }
+
+    .card-container{
+        flex-direction: column;
+        .quote-container{
+            width: 100%;
+        }
+    }
+}
+
+@media only screen and (max-width: 900px){
+    .card-container{
+        flex-direction: column;
+        .card{
+            margin-top: 2rem;
+        }
+    }
+}
