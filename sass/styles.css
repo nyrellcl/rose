@@ -1,0 +1,249 @@
+@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Sacramento&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+/*%bestia{
+    font-size: 1.15rem;
+	color: #fff;
+	background: none;
+	padding: 0;
+    .btn-bg{
+        top: 0;
+        left: 0;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: #e7e7e7;
+        border-radius: 0.85rem;
+        overflow: hidden;
+        transition: transform 0.4s cubic-bezier(0.1,0,0.3,1);
+    }
+    &:hover .btn-bg{
+        transform: scale3d(1.2,1.2,1);
+    }
+    .btn-bg::before, .btn-bg::after{
+        content: '';
+        position: absolute;
+        background: #000;
+    }
+    .btn-bg::before{
+        width: 110%;
+        height: 0;
+        padding-bottom: 110%;
+        top: 50%;
+        left: 50%;
+        border-radius: 50%;
+        transform: translate3d(-50%, -50%, 0) scale3d(0,0,1);
+
+    }
+
+    &:hover .btn-bg::before{
+        transition: transform 0.4s cubic-bezier(0.1, 0, 0.3, 1);
+        transform: translate3d(-50%, -50%, 0) scale3d(1,1,1);
+    }
+
+    .btn-bg::after{
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        transition: opacity 0.3s;
+    }
+
+    &:hover .btn-bg::after{
+        opacity: 1;
+        transition-duration: 0.01s;
+        transition-delay: 0.3s;
+    }
+}*/
+body {
+  background-image: linear-gradient(180deg, rgba(191, 224, 250, 0.993), transparent);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+h1 {
+  font-family: "Sacramento", cursive;
+  font-size: 4rem;
+  letter-spacing: 0.4rem;
+  padding: 0 0.5rem;
+  text-align: center;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 2px groove rgba(251, 253, 182, 0.76);
+  width: 1000px;
+  height: 400px;
+  margin: auto;
+  border-radius: 20px;
+  border-width: 20px;
+  background-color: rgb(250, 232, 204);
+  filter: drop-shadow(0 0 4rem rgb(240, 202, 182));
+}
+.card .card-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.card .btn {
+  width: 200px;
+  height: 50px;
+  margin-top: 2rem;
+  border-radius: 20px;
+  border: none;
+  font-size: 1.25rem;
+  letter-spacing: 0.1rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  position: relative;
+}
+.card .btn--style .btn-bg {
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(191, 224, 250, 0.993);
+  border-radius: 0.85rem;
+  overflow: hidden;
+  transition: transform 0.4s cubic-bezier(0.1, 0, 0.3, 1);
+}
+.card .btn--style:hover .btn-bg {
+  transform: scale3d(1.2, 1.2, 1);
+  cursor: pointer;
+}
+.card .btn--style .btn-bg::before,
+.card .btn--style .btn-bg::after {
+  content: "";
+  position: absolute;
+  background: #000;
+}
+.card .btn--style .btn-bg::before {
+  width: 110%;
+  height: 0;
+  padding-bottom: 110%;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+  transform: translate3d(-50%, -50%, 0) scale3d(0, 0, 1);
+}
+.card .btn--style:hover .btn-bg::before {
+  transition: transform 0.4s cubic-bezier(0.1, 0, 0.3, 1);
+  transform: translate3d(-50%, -50%, 0) scale3d(1, 1, 1);
+}
+.card .btn--style .btn-bg::after {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.card .btn--style:hover .btn-bg::after {
+  opacity: 1;
+  transition-duration: 0.01s;
+  transition-delay: 0.3s;
+}
+.card .btn--style span {
+  display: block;
+  position: relative;
+  mix-blend-mode: difference;
+  color: #fff;
+}
+
+.heart {
+  background-color: pink;
+  height: 50px;
+  width: 50px;
+  transform: rotate(-45deg);
+  -webkit-animation-name: beat;
+          animation-name: beat;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+.heart::before {
+  background-color: pink;
+  content: "";
+  border-radius: 50%;
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top: -25px;
+  left: 0px;
+}
+.heart::after {
+  background-color: pink;
+  content: "";
+  border-radius: 50%;
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top: 0px;
+  left: 25px;
+}
+
+@-webkit-keyframes beat {
+  0% {
+    transform: scale(1) rotate(-45deg);
+  }
+  50% {
+    transform: scale(0.8) rotate(-45deg);
+  }
+}
+
+@keyframes beat {
+  0% {
+    transform: scale(1) rotate(-45deg);
+  }
+  50% {
+    transform: scale(0.8) rotate(-45deg);
+  }
+}
+@media only screen and (max-width: 500px) {
+  .card {
+    width: 100%;
+    height: auto;
+  }
+
+  .heart {
+    margin-top: 2rem;
+  }
+
+  .btn {
+    margin-bottom: 2rem;
+  }
+}
+@media only screen and (max-width: 1000px) {
+  .card {
+    width: 100%;
+    height: auto;
+  }
+
+  .heart {
+    margin-top: 2rem;
+  }
+
+  .btn {
+    margin-bottom: 2rem;
+  }
+}/*# sourceMappingURL=styles.css.map */
