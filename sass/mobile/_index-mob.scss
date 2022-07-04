@@ -1,0 +1,35 @@
+
+@media only screen and (max-width: 500px){
+
+    h1{
+        font-size: 3.5rem;
+    }
+
+    .card{
+        width: 100%;
+        height: auto;
+    }
+
+    .heart{
+        margin-top: 2rem;
+    }
+
+    .btn{
+        margin-bottom: 2rem;
+    }
+
+}
+
+@media only screen and (max-width: 1000px){
+    .card{
+        width: 100%;
+        height: auto;
+    }
+
+    .heart{
+        margin-top: 2rem;
+    }
+    .btn{
+        margin-bottom: 2rem;
+    }
+}
